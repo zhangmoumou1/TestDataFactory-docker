@@ -11,9 +11,6 @@ services:
     links:
       - mysql
       - redis
-    depends_on:
-      - mysql
-      - redis
     networks:
       - backend
       - frontend
