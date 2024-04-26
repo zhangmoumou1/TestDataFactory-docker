@@ -1,0 +1,12 @@
+# db
+MYSQL_IMAGE=mysql:5.7
+
+# redis
+REDIS_IMAGE=redis:alpine
+
+# web
+TestDataFactory_IMAGE=ccr.ccs.tencentyun.com/zhangyancheng/zhangyancheng:1.0
+
+# nginx
+NGINX_IMAGE=nginx:stable-alpine
+NGINX_PORT=80
