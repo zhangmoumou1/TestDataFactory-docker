@@ -4,8 +4,6 @@ services:
     restart: always
     image: ${TestDataFactory_IMAGE}
     container_name: TestDataFactory_web
-    env_file:
-      - ./TestDataFactory.env
     volumes:
       - ./web/static:/opt/cloud/TestDataFactory/static
     networks:
