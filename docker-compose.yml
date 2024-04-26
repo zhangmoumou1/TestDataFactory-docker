@@ -9,8 +9,8 @@ services:
     volumes:
       - ./web/static:/opt/cloud/TestDataFactory/static
     links:
-      - mysql
-      - redis
+      - mysql:5.7
+      - redis:alpine
     networks:
       - backend
       - frontend
