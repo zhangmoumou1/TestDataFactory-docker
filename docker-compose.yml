@@ -4,6 +4,12 @@ services:
     restart: always
     image: ${TestDataFactory_IMAGE}
     container_name: TestDataFactory_web
+    environment:
+      MYSQL_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_HOST: ${MYSQL_IP}
+      MYSQL_NAME: ${MYSQL_NAME}
+      MYSQL_USER: ${MYSQL_ROOT_USERNAME}
+      MYSQL_PORT: 3306
     volumes:
       - ./web/static:/opt/cloud/TestDataFactory/static
     networks:
