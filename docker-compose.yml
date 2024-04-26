@@ -8,9 +8,6 @@ services:
       - ./TestDataFactory.env
     volumes:
       - ./web/static:/opt/cloud/TestDataFactory/static
-    links:
-      - mysql:5.7
-      - redis:alpine
     networks:
       - backend
       - frontend
