@@ -8,7 +8,7 @@ pipeline {
     environment {
         GITHUB_USER_ID = '2b98d5a0-65f8-4961-958d-ad3620541256'
         ALIYUN_USER_ID = '06989ce7-86fb-43ca-aec0-313d260af382'
-        IMAGE_NAME = 'ccr.ccs.tencentyun.com/zhangyancheng/zhangyancheng:1.0'
+        IMAGE_NAME = 'ccr.ccs.tencentyun.com/zhangyancheng/test_data_factory:1.o'
     }
     stages {
         stage('Clone sources') {
@@ -28,7 +28,7 @@ pipeline {
         }
         stage('Push image') {
             steps {
-                withDockerRegistry(credentialsId: "${ALIYUN_USER_ID}", url: 'ccr.ccs.tencentyun.com/zhangyancheng/zhangyancheng') {
+                withDockerRegistry(credentialsId: "${ALIYUN_USER_ID}", url: 'ccr.ccs.tencentyun.com/zhangyancheng') {
                     sh "docker push ${IMAGE_NAME}"
                 }
             }
